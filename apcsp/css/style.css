@@ -5,3 +5,27 @@ body{
 .title {
   text-align: center;
 }
+
+.image {
+  height: 30%;
+  width: 30%;
+  margin-left: 35%;
+}
+
+.button {
+  border-radius: 5vw;
+  padding-right: 15vw; 
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 1vw;
+  padding-left: 15vw;
+  margin-left: 10%;
+}
+
+.submitButton {
+  padding: 5%;
+  width: 100%;
+  border-radius: 30px;
+  margin-top: 5%;
+  background-color: rgb(147, 168, 168);
+}
