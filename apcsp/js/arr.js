@@ -36,9 +36,9 @@ const colors = [
     }
 ];
 
-const answers = ["red", "pink", "black", "orange", "cyan"]
+const questionAnswers = ["red", "pink", "black", "orange", "cyan"]
 
 //write an array with all the answers, for the algorithm, compare the answers with what the user clicked. Display wrong answers at the end. 
 
 export {colors}
-export {answers}
+export {questionAnswers}

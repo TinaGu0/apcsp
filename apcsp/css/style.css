@@ -22,6 +22,10 @@ body{
   margin-left: 10%;
 }
 
+.button:hover {
+  background-color: aqua;
+}
+
 .submitButton {
   padding: 5%;
   width: 100%;
