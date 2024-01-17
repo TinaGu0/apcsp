@@ -29,7 +29,7 @@ const colors = [
     },
     {
         img:"https://th.bing.com/th/id/OIP.X404774Uc8d7VpYRkmQlTgAAAA?rs=1&pid=ImgDetMain",
-        color1: "blue",
+        color1: "black",
         color2: "cyan",
         color3: "purple", 
         color4: "black"

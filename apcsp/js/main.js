@@ -31,6 +31,7 @@ function submit(){
   DOM.submit.insertAdjacentHTML("afterend", `
   <button class="submitButton" id="submitAnswers">Submit</button>
   `);
+  finish()
 };
 const userAnswers = [];
 function getUserAnswers(){
@@ -42,8 +43,28 @@ buttons.forEach((btns) => btns.addEventListener("click", function() {
 }))
 };
 
+//gets both arrays
 function finish(){
-  DOM.submitAnswers.addEventListener("click", function compareArrays() {
-    console.log(questionAnswers, userAnswers)
+  let submitAnswers = document.querySelector("#submitAnswers")
+  submitAnswers.addEventListener("click", function compareArrays() {
+    DOM.questionsPage.remove() //removes question page
+    //takes the arrays and compares them 
+    let findDiff = function (s , t) {
+      let sortS = [...s]
+      let sortT = [...t]
+      for (let i = 0; i < sortT.length; i++) {
+        if (sortT[i] != sortS[i]) {
+          userResult.insertAdjacentHTML("afterend", `<p>Not Good :(</p>`)
+          return sortT[i];
+          
+        } else if (sortT[i] == sortS[i]) {
+          let userResult = document.querySelector("#userResult");
+          userResult.insertAdjacentHTML("afterend", `<p>Good Job!</p>`)
+          return "good job!"
+        }
+      }
+    };
+    console.log(findDiff(userAnswers, questionAnswers));
+    console.log(userAnswers, questionAnswers)
   });
 };
