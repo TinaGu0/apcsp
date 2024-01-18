@@ -49,22 +49,20 @@ function finish(){
   submitAnswers.addEventListener("click", function compareArrays() {
     DOM.questionsPage.remove() //removes question page
     //takes the arrays and compares them 
-    let findDiff = function (s , t) {
-      let sortS = [...s]
-      let sortT = [...t]
-      for (let i = 0; i < sortT.length; i++) {
-        if (sortT[i] != sortS[i]) {
-          userResult.insertAdjacentHTML("afterend", `<p>Not Good :(</p>`)
-          return sortT[i];
-          
-        } else if (sortT[i] == sortS[i]) {
-          let userResult = document.querySelector("#userResult");
-          userResult.insertAdjacentHTML("afterend", `<p>Good Job!</p>`)
-          return "good job!"
+    let findDiff = function (a, b) {
+      let uA = [...a]
+      let qA = [...b]
+      for (let i = 0; i < 6; i++) {
+         if (uA[i] != qA[i]) {
+          let diff = qA[i];
+          userResult.insertAdjacentHTML("afterend", `<p>Not Good :(</p>`);
+          return diff;
+           ///aaaa look above frfr ong no cap 
         }
       }
     };
     console.log(findDiff(userAnswers, questionAnswers));
-    console.log(userAnswers, questionAnswers)
+    console.log(userAnswers, questionAnswers);
   });
 };
+
