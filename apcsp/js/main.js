@@ -56,7 +56,9 @@ function finish(){
          if (uA[i] != qA[i]) {
           let diff = qA[i];
           userResult.insertAdjacentHTML("afterend", `<p>Not Good :(</p>`);
-          return diff;
+          const arrarr =[]
+          arrarr.push(diff);
+          return arrarr;
            ///aaaa look above frfr ong no cap 
         }
       }
