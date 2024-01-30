@@ -43,6 +43,8 @@ buttons.forEach((btns) => btns.addEventListener("click", function() {
 }))
 };
 
+
+let arrarr =[] //differences
 //gets both arrays
 function finish(){
   let submitAnswers = document.querySelector("#submitAnswers")
@@ -52,17 +54,27 @@ function finish(){
     let findDiff = function (a, b) {
       let uA = [...a]
       let qA = [...b]
-      for (let i = 0; i < 6; i++) {
-         if (uA[i] != qA[i]) {
+      /* for (let i = 0; i < 6; i++) {
+        if (uA[i] != qA[i]) {
           let diff = qA[i];
-          userResult.insertAdjacentHTML("afterend", `<p>Not Good :(</p>`);
-          const arrarr =[]
           arrarr.push(diff);
           return arrarr;
            ///aaaa look above frfr ong no cap 
         }
       }
-    };
+    }; */
+    let i = 0;
+    while (i < 6) {
+      i++; 
+      if (uA[i] != qA[i]) {
+        let diff = qA[i];
+        arrarr.push(diff);
+        console.log(arrarr)
+      } else {
+        i++;
+      }
+    } 
+  };
     console.log(findDiff(userAnswers, questionAnswers));
     console.log(userAnswers, questionAnswers);
   });
