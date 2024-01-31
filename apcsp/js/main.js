@@ -54,29 +54,20 @@ function finish(){
     let findDiff = function (a, b) {
       let uA = [...a]
       let qA = [...b]
-      /* for (let i = 0; i < 6; i++) {
-        if (uA[i] != qA[i]) {
-          let diff = qA[i];
-          arrarr.push(diff);
-          return arrarr;
-           ///aaaa look above frfr ong no cap 
-        }
-      }
-    }; */
     let i = 0;
     while (i < 6) {
       i++; 
       if (uA[i] != qA[i]) {
         let diff = qA[i];
         arrarr.push(diff);
-        console.log(arrarr)
+      } else if (uA[i] == qA[i]){
+        DOM.userResult.insertAdjacentHTML("afterbegin", `<p>Correct, Good Job!</p>`);
       } else {
-        i++;
-      }
-    } 
-  };
+        DOM.userResult.insertAdjacentHTML("afterbegin", `<p>Incorrect</p>`);
+      }}
+    };
     console.log(findDiff(userAnswers, questionAnswers));
-    console.log(userAnswers, questionAnswers);
+    console.log(arrarr)
   });
 };
 
