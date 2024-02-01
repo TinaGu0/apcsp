@@ -23,7 +23,7 @@ body{
 }
 
 .button:hover {
-  background-color: aqua;
+  background-color: rgb(230, 201, 157);
 }
 
 .submitButton {
@@ -31,5 +31,5 @@ body{
   width: 100%;
   border-radius: 30px;
   margin-top: 5%;
-  background-color: rgb(147, 168, 168);
+  background-color: rgb(219, 214, 144);
 }

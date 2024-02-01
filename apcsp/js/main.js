@@ -60,14 +60,31 @@ function finish(){
       if (uA[i] != qA[i]) {
         let diff = qA[i];
         arrarr.push(diff);
-      } else if (uA[i] == qA[i]){
-        DOM.userResult.insertAdjacentHTML("afterbegin", `<p>Correct, Good Job!</p>`);
-      } else {
-        DOM.userResult.insertAdjacentHTML("afterbegin", `<p>Incorrect</p>`);
-      }}
+    }} 
     };
     console.log(findDiff(userAnswers, questionAnswers));
-    console.log(arrarr)
+    console.log(arrarr);
+    results(arrarr)
   });
 };
+/* 
+function results(){
+  let i = 0
+  console.log(userAnswers, questionAnswers)
+  for (i=0;i < 6 ;i++) {
+    if (userAnswers[i] == questionAnswers[i]) {
+      console.log("all correct")
+    } else if (userAnswers[i] != questionAnswers[i]) {
+      console.log("wrong")
+    }
+  }
+}; */
 
+function results(arr) {
+  let a = arrarr.length
+  if (a == 0) {
+    DOM.userResult.insertAdjacentHTML("beforebegin", `<p>all correct. good job!</p>`)
+  } else if (a > 0) {
+    DOM.userResult.insertAdjacentHTML("beforebegin", `<p>you're incorrect</p>`)
+  }
+};
