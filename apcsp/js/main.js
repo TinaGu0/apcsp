@@ -74,6 +74,6 @@ function results(arr) {
   } else if (a > 0) {
     console.log(wrongAnswers)
     DOM.userResult.insertAdjacentHTML("beforebegin", `<h2 class="text">you're incorrect</h2>
-    <p>you got these colros wrong: ${wrongAnswers}</p> `)
+    <p>you got these colors wrong: ${wrongAnswers}</p> `)
   }
 };
