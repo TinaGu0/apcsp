@@ -44,7 +44,7 @@ buttons.forEach((btns) => btns.addEventListener("click", function() {
 };
 
 
-let arrarr =[] //differences
+let wrongAnswers =[] //differences
 //gets both arrays
 function finish(){
   let submitAnswers = document.querySelector("#submitAnswers")
@@ -59,32 +59,21 @@ function finish(){
       i++; 
       if (uA[i] != qA[i]) {
         let diff = qA[i];
-        arrarr.push(diff);
+        wrongAnswers.push(diff);
     }} 
     };
     console.log(findDiff(userAnswers, questionAnswers));
-    console.log(arrarr);
-    results(arrarr)
+    results(wrongAnswers)
   });
 };
-/* 
-function results(){
-  let i = 0
-  console.log(userAnswers, questionAnswers)
-  for (i=0;i < 6 ;i++) {
-    if (userAnswers[i] == questionAnswers[i]) {
-      console.log("all correct")
-    } else if (userAnswers[i] != questionAnswers[i]) {
-      console.log("wrong")
-    }
-  }
-}; */
 
 function results(arr) {
-  let a = arrarr.length
+  let a = wrongAnswers.length
   if (a == 0) {
-    DOM.userResult.insertAdjacentHTML("beforebegin", `<p>all correct. good job!</p>`)
+    DOM.userResult.insertAdjacentHTML("beforebegin", `<h2 class="text">all correct. good job!</h2>`)
   } else if (a > 0) {
-    DOM.userResult.insertAdjacentHTML("beforebegin", `<p>you're incorrect</p>`)
+    console.log(wrongAnswers)
+    DOM.userResult.insertAdjacentHTML("beforebegin", `<h2 class="text">you're incorrect</h2>
+    <p>you got these colros wrong: ${wrongAnswers}</p> `)
   }
 };

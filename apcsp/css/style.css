@@ -22,6 +22,12 @@ body{
   margin-left: 10%;
 }
 
+.button2 { 
+  padding: 2vw;
+  width: 20vw;
+  background-color: #ebecb1;
+}
+
 .button:hover {
   background-color: rgb(230, 201, 157);
 }
